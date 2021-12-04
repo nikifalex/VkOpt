@@ -1,6 +1,6 @@
 ﻿// ==UserScript==
 // @name          VKOpt
-// @version       3.0.8.2
+// @version       3.0.9
 // @author        KiberInfinity [id13391307]
 // @namespace     http://vkopt.net/
 // @description   Vkontakte Optimizer 3.x
@@ -389,7 +389,7 @@
       js.type = 'text/javascript';
       js.charset = 'UTF-8';
       js.innerHTML=script;
-      js.setAttribute(mark,"3.0.8.2");
+      js.setAttribute(mark,"3.0.9");
       doc.getElementsByTagName('head')[0].appendChild(js);
    }
    init();
@@ -405,8 +405,8 @@
 //////////////////////////////////////////////////
 
 /* VERSION INFO */
-var vVersion = 308;
-var vBuild = 210307;
+var vVersion = 309;
+var vBuild = 211204;
 var vVersionRev = 2;
 var vPostfix = '';
 
