@@ -1903,7 +1903,7 @@ function vk_oauth_api(app_id,scope){
          }
 
          var params = {
-            v: '5.131',
+            v: '5.133',
             format:'json'
          };
          if (inputParams)

@@ -8661,7 +8661,7 @@ vkopt['messages'] = {
                         'profiles:['+code.profiles.join(',')+'],'+
                         'groups:['+code.groups.join(',')+']'+
                      '};',
-               v:'5.131'
+               v:'5.133'
             },
             function(r){
             var msgs = r.response.items;
@@ -10494,7 +10494,7 @@ vkopt['profile'] = {
          vkopt.profile.orig_avatar();
 
       /*
-      ge('profile_message_send') && dApi.call('messages.getHistory',{user_id: cur.oid, v:'5.85'}, function(r,result){
+      ge('profile_message_send') && dApi.call('messages.getHistory',{user_id: cur.oid, v:'5.133'}, function(r,result){
          if (result && result.count){
             geByClass1('flat_button', ge('profile_message_send')).appendChild(se('<span> ('+result.count+')</span>'))
          }
@@ -10618,13 +10618,13 @@ vkopt['profile'] = {
       if(!ge('avatar_orig') && !el) return;
       var body_code = 'var info = API.users.get({"user_ids":' + cur.oid + ', fields:"crop_photo"});' +
                       'if(info[0].crop_photo) return info@.crop_photo@.photo@.sizes@.pop();';
-      dApi.call('execute',{v:'5.85', code:body_code},function(r){
+      dApi.call('execute',{v:'5.133', code:body_code},function(r){
          if (r.response)
             el.innerHTML = vk_lib.tpl_process(vkopt.profile.tpls['orig_avatar'], {href: r.response[0].url, el:el.innerHTML});
       });
    },
    show_avatar: function(){
-      dApi.call('users.get',{user_ids: cur.oid, fields:'crop_photo', v:'5.85'},  function(r,resp){
+      dApi.call('users.get',{user_ids: cur.oid, fields:'crop_photo', v:'5.133'},  function(r,resp){
          var ph = resp[0].crop_photo.photo;
          var sz = ph.sizes;
          var pv_sz = {base:''};
