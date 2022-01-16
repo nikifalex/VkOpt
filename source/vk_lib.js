@@ -2119,7 +2119,7 @@ vkApis={
                           offset: i * PER_REQ,
                           count: PER_REQ,
                           photo_sizes: 1,
-                          v: '5.131'};
+                          v: '5.133'};
             dApi.call('photos.get', params, function (r) {
                 total = r.response.count;
                 for (var j = 1; j < r.response.items.length; j++){
